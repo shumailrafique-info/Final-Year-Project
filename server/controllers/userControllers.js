@@ -30,16 +30,17 @@ const registerUser = async (req, res, next) => {
 //Login User
 const LoginUser = async (req, res, next) => {
   try {
+
     const { email, password } = req.body;
 
     //Checking if user has given password and email both
     if (!email || !password) {
-      return next(new ErrorHandler("Please Enter Email $ Password", 400));
+      return next(new ErrorHandler("Please Enter Email & Password", 400));
     }
 
     const user = await User.findOne({ email: email.toLowerCase() }).select(
       "+password"
-    );
+    )
 
     if (!user) {
       return next(new ErrorHandler("Invalid Email or Password", 401));
@@ -92,7 +93,7 @@ const forgetPassword = async (req, res, next) => {
 
   const resetPasswordUrl = `${req.protocol}://${req.get(
     "host"
-  )}/api/v1/password/reset/${resetToken}`;
+  )}/password/reset/${resetToken}`;
 
   // console.log(resetToken);
 

@@ -5,7 +5,7 @@ const sendToken = (user, statusCode, res) => {
   const options = {
     httpOnly: true,
     // expires: Date.now() + 15 * 1000 * 60,
-    maxAge: 15 * 60 * 1000,
+    maxAge:24* 60 * 60 * 1000,
     // sameSite: "none",
     // secure: true,
     path: "/",
