@@ -3,6 +3,7 @@ import Carousel from "react-material-ui-carousel";
 import "./ProductDetails.scss";
 import ReviewCart from "./ReviewCart.jsx";
 import { useSelector, useDispatch } from "react-redux";
+import { WhatsappShareButton, WhatsappIcon, FacebookIcon, FacebookShareButton } from "react-share"
 import {
   clearErrors,
   getProductDetails,
@@ -151,7 +152,7 @@ const ProductDetails = ({ match }) => {
                       readOnly
                       name="QuantityInput"
                       value={quantity}
-                      onChange={(e) => {}}
+                      onChange={(e) => { }}
                     />
                     <button onClick={incquantity}>+</button>
                   </div>
@@ -172,10 +173,18 @@ const ProductDetails = ({ match }) => {
               <div className="detailsBlock-4">
                 Description : <p>{product.description}</p>
               </div>
-
+              <div style={{ display: "flex", gap: "5px" }}>
+                <WhatsappShareButton url={`https://aurabazaar.vercel.app/product/${id}`}>
+                  <WhatsappIcon size={40} round></WhatsappIcon>
+                </WhatsappShareButton>
+                <FacebookShareButton url={`https://aurabazaar.vercel.app/product/${id}`}>
+                  <FacebookIcon size={40} round></FacebookIcon>
+                </FacebookShareButton>
+              </div>
               <button onClick={submitReviewToggel} className="submitReview">
                 Submit Review
               </button>
+
             </div>
           </div>
 
