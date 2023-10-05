@@ -1,0 +1,64 @@
+// .menuBurgerItem {
+//   margin: -0.6rem;
+// }
+// .menuBurger{
+//   overflow: visible;
+// }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/* font-family: 'Russo One', sans-serif; */
+
+.header {
+  position: sticky;
+  top: -1px;
+  background-color: white;
+  z-index: 20000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 83px;
+  border-bottom: 0.4px solid rgba(209, 195, 195, 0.877);
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s ease all;
+  > span {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    margin-right: 3px;
+    transition: 0.5s ease all;
+  }
+  > svg {
+    font-size: 25px;
+    transition: 0.5s ease all;
+  }
+  &:hover {
+    color: #bb7b1c;
+  }
+}
+.logo img {
+  width: 180px;
+  height: 120px;
+}
+.icons {
+  > a {
+    margin: 0px 3px;
+    svg {
+      color: black;
+      transition: 0.5s ease all;
+      font-size: 20px;
+      &:hover {
+        color: #bb7b1c;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "600px") {
+  .logo img {
+    margin-left: 25px;
+  }
+}

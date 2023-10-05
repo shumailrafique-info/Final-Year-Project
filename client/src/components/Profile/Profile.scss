@@ -1,0 +1,112 @@
+.profileContainer {
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  > div {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  > div:first-child > h1 {
+    color: rgba(0, 0, 0, 0.555);
+    font: 500 2.2vmax "Roboto";
+    transform: translateX(-10vmax) translateY(-2vmax);
+  }
+  > div:first-child > img {
+    width: 20vmax;
+    height: 20vmax;
+    border-radius: 100%;
+    transition: 0.5s ease all;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  > div:first-child > a {
+    border: none;
+    background-color: rgb(5, 135, 241);
+    font: 400 1vmax "Roboto";
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5vmax;
+    margin: 4vmax;
+    width: 30%;
+    transition: 0.5s ease all;
+    &:hover {
+      background-color: rgb(36, 95, 143);
+    }
+  }
+  > div:last-child {
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding: 5vmax;
+    align-items: start;
+  }
+  > div:last-child > div > h4 {
+    color: black;
+    font: 400 1.6vmax "Roboto";
+  }
+  > div:last-child > div > p {
+    color: rgba(0, 0, 0, 0.616);
+    font: 400 1.2vmax "Roboto";
+    margin: 0.2vmax;
+  }
+  > div:last-child > div:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+  > div:last-child > div:last-child a {
+    border: none;
+    background-color: rgb(5, 135, 241);
+    text-align: center;
+    padding: 0.5vmax;
+    font: 400 1vmax "Roboto";
+    color: white;
+    text-decoration: none;
+    transition: 0.5s ease all;
+    margin: 1vmax 0;
+    &:hover {
+      background-color: rgb(36, 95, 143);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+  .profileContainer > div:first-child > h1 {
+    font: 500 3.2vmax "Roboto";
+    transform: translateY(-2vmax);
+  }
+  .profileContainer > div:first-child > a {
+    font: 400 1.7vmax "Roboto";
+    padding: 1vmax;
+  }
+  .profileContainer > div:last-child {
+    text-align: center;
+    align-items: center;
+  }
+  .profileContainer > div:last-child > div h4 {
+    font: 400 2.5vmax "Roboto";
+  }
+  .profileContainer > div:last-child > div p {
+    font: 400 2vmax "Roboto";
+    margin: 0.5vmax 0;
+  }
+  .profileContainer > div:last-child > div:last-child > a {
+    font: 400 2vmax "Roboto";
+    padding: 1vmax;
+    margin: 2vmax 0;
+  }
+}

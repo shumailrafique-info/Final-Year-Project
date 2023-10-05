@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/* font-family: 'Russo One', sans-serif; */
+.main-frangment {
+  overflow: hidden;
+}
+.ProductsHeaading {
+  margin: 2vmax 0px;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  > p {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+    padding: 2vmax;
+    width: 30%;
+    font: 700 2vmax "Roboto";
+    text-align: center;
+  }
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+//Pagination
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+.pagination {
+  border-radius: 10px;
+}
+
+//
+.filterBox {
+  width: 100vw;
+  padding: 10vmax;
+  // position: absolute;
+  top: 7vmax;
+  left: 1vmax;
+}
+
+.categoryBox {
+  padding: 0%;
+}
+.category-link {
+  list-style: none;
+  font: 400 1vmax "Roboto";
+  margin: 0.4vmax;
+  cursor: pointer;
+  transition: 0.4s ease all;
+  &:hover {
+    color: tomato;
+  }
+}
+
+.ratings-pro {
+  border: 1px solid black;
+  padding: 0 1vmax;
+}
+
+//
+.products-section {
+  min-height: 100vh;
+  > .row {
+    > .left {
+      padding: 2rem 4rem;
+      > p {
+        font-family: "Russo One", sans-serif;
+        font-size: 24px;
+      }
+      > ul > li {
+        font-size: 18px;
+        padding: 8px;
+      }
+    }
+    > .right {
+      text-decoration: none;
+    }
+  }
+}
+.not-found-div {
+  background-color: rgb(223, 220, 220);
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .filterBox {
+    display: flex;
+    flex-direction: column;
+    width: 30vmax;
+    text-align: center;
+    margin: 2vmax auto;
+    position: relative;
+    left: 0%;
+    top: 0%;
+    > p {
+      font-size: 3vmax;
+    }
+  }
+  .category-link {
+    font: 500 2vmax "Roboto";
+  }
+}
+
+@media screen and (max-width: "700px") {
+  .products-section {
+    min-height: 100vh;
+    flex-direction: column-reverse;
+    > .row {
+      > .left {
+        padding: 2rem 4rem;
+        > p {
+          font-family: "Russo One", sans-serif;
+          font-size: 24px;
+        }
+        > ul > li {
+          font-size: 18px;
+          padding: 8px;
+        }
+      }
+      > .right {
+        text-decoration: none;
+      }
+    }
+  }
+}

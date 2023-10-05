@@ -6,7 +6,7 @@ const processPayment = async (req, res, next) => {
       amount: req.body.amount,
       currency: "inr",
       metadata: {
-        company: "Shumail Store",
+        company: "AuraBazaar",
       },
     });
 

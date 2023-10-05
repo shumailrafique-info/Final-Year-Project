@@ -1,0 +1,109 @@
+.shippingContainer {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.shippingBox {
+  width: 25vw;
+  height: 90vh;
+  background-color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.shippingHeading {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.628);
+  font: 400 1.3vmax "Roboto";
+  width: 50%;
+  margin: 1.2vmax auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.231);
+  padding: 1.3vmax;
+}
+.shippingForm {
+  display: flex;
+  height: 80%;
+  transition: 0.5s ease all;
+  justify-content: space-evenly;
+  padding: 2vmax;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.shippingForm {
+  > div {
+    > input,
+    > select {
+      padding: 1vmax 4vmax;
+      padding-right: 1vmax;
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.218);
+      border-radius: 4px;
+      font: 300 0.9vmax cursive;
+      outline: none;
+    }
+    > svg {
+      position: absolute;
+      color: rgba(0, 0, 0, 0.653);
+      font-size: 1.6vmax;
+      transform: translateX(1vmax);
+    }
+  }
+}
+.shippingBtn {
+  border: none;
+  background-color: rgb(5, 135, 241);
+  color: white;
+  font: 400 1vmax "Roboto";
+  width: 100%;
+  padding: 1vmax;
+  cursor: pointer;
+  transition: 0.5s ease all;
+  outline: none;
+  margin: 2vmax;
+  &:hover {
+    background-color: rgb(36, 95, 143);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .shippingBox {
+    width: 100vw;
+    height: 95vh;
+  }
+  .shippingHeading {
+    font: 400 6vw "Roboto";
+    padding: 5vw;
+  }
+  .shippingForm {
+    padding: 11vmin;
+  }
+
+  .shippingForm {
+    > div {
+      > input,
+      > select {
+        padding: 5vmin 10vmin;
+        font: 300 4vw cursive;
+      }
+      > svg {
+        font-size: 6vw;
+        transform: translateX(3vw);
+      }
+    }
+  }
+
+  .shippingBtn {
+    font: 300 4vw "Roboto";
+    padding: 4vw;
+  }
+}

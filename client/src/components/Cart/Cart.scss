@@ -1,0 +1,208 @@
+.emptyCart {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  >svg{
+    color: tomato;
+    font-size: 5vmax;
+  }
+  >p{
+    margin-top: 1vmax;
+    font: 400 1.3vmax cursive;
+  }
+  >a{
+    text-decoration: none;
+    font: 500 1vmax "Roboto";
+    margin-top: 2vmax;
+    color: white;
+    padding: .7vmax 1.2vmax ;
+    border-radius: 30px;
+    background-color: tomato;
+    transition: .5s ease all;
+    &:hover{
+        background-color: #FF9F59;
+    }
+  }
+}
+
+.cartPage {
+  padding: 5vmax;
+}
+.cartHeader {
+  background-color: #FF9F59;
+  width: 90%;
+  box-sizing: border-box;
+  grid-template-columns: 4fr 1fr 1fr;
+  display: grid;
+  color: white;
+  margin: auto;
+  font: 400 1vmax "Roboto";
+  > p {
+    margin: 10px;
+  }
+  > p:last-child {
+    text-align: end;
+  }
+}
+
+.cartContainer {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+.cartInput {
+  height: 8vmax;
+  display: flex;
+  align-items: center;
+  > button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.631);
+    padding: 0.5vmax;
+    width: 2vmax;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s ease all;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.787);
+    }
+  }
+  > input {
+    border: none;
+    padding: 0.5vmax;
+    width: 3vmax;
+    font: 400 0.8vmax "Roboto";
+    color: rgba(0, 0, 0, 0.752);
+    outline: none;
+    text-align: center;
+  }
+}
+
+.cartSubtotal {
+  display: flex;
+  padding: 0.5vmax;
+  justify-content: flex-end;
+  align-items: center;
+  font: 300 1vmax cursive;
+  color: rgba(0, 0, 0, 0.741);
+  box-sizing: border-box;
+}
+.cartGrossProfit {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+}
+.cartGrossProfitBox {
+  border-top: 3px solid #FF9F59;
+  box-sizing: border-box;
+  margin: 1vmax 4vmax;
+  font: 300 1vmax "Roboto";
+  padding: 2vmax 0;
+  display: flex;
+  justify-content: space-between;
+}
+.checkOutBtn {
+  display: flex;
+  justify-content: flex-end;
+  > button {
+    background-color: #FF9F59;
+    border-radius: 30px;
+    color: white;
+    width: 50%;
+    font: 300 0.8vmax "Roboto";
+    border: none;
+    cursor: pointer;
+    margin: 1vmax 4vmax;
+    padding: 0.8vmax 4vmax;
+    transition: .5s ease all;
+    &:hover{
+      background-color: #FF9F59;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cartPage {
+    padding: 0px;
+    min-height: 60vh;
+  }
+  .cartHeader {
+    width: 100%;
+    font: 300 2vmax "Roboto";
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  .cartContainer {
+    width: 100%;
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+  .cartInput {
+    height: 20vmax;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > input {
+      padding: 1.5vmax;
+      width: 4vmax;
+      font: 400 2vmax "Roboto";
+    }
+  }
+  .cartInput > button {
+    padding: 2vmax;
+    text-align: center;
+  }
+  .cartSubtotal {
+    padding: 1.5vmax;
+    font: 300 2vmax "Roboto";
+    height: 20vmax;
+  }
+  .cartGrossProfit {
+    display: grid;
+    grid-template-columns: 0fr 2fr;
+  }
+  .cartGrossProfitBox {
+    padding: 2vmax;
+    font: 300 2vmax "Roboto";
+  }
+  .checkOutBtn > button {
+    padding: 2vmax 4vmax;
+    font: 300 2vmax "Roboto";
+    width: 100%;
+  }
+
+  .emptyCart {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    >svg{
+      color: tomato;
+      font-size: 10vmax;
+    }
+    >p{
+      margin-top: 1vmax;
+      font: 400 2vmax cursive;
+    }
+    >a{
+      text-decoration: none;
+      font: 500 2vmax "Roboto";
+      margin-top: 2vmax;
+      color: white;
+      padding: .7vmax 1.4vmax ;
+      border-radius: 30px;
+      background-color: tomato;
+      transition: .5s ease all;
+      &:hover{
+          background-color: rgb(166, 72, 56);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.top-banner{
+    text-align: center;
+    z-index: 20000 !important;
+    font-size: .75rem;
+    background-color: #f7b789;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    transition: .5s ease all;
+    margin: 0px;
+}
+.top-banner:hover{
+    color: #fcb900 ;
+}
+
+@media only screen and (max-width: 584px) {
+    .top-banner{
+        font-size: .6rem;
+    }
+  }

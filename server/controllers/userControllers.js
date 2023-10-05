@@ -102,7 +102,7 @@ const forgetPassword = async (req, res, next) => {
   try {
     await SendEmail({
       email: user.email,
-      subject: `Ecommrance Password Recovery`,
+      subject: `AuraBazaar Password Recovery`,
       message,
     });
 
@@ -146,7 +146,7 @@ const resetPassword = async (req, res, next) => {
     }
 
     if (req.body.password !== req.body.confirmpassword) {
-      return next(new ErrorHandler("Password doesnot match", 400));
+      return next(new ErrorHandler("Password doesn't match", 400));
     }
 
     user.password = req.body.password;

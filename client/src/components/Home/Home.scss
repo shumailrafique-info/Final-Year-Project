@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/* font-family: 'Russo One', sans-serif; */
+
+.banner {
+  background-image: url("../../images/pic1.jpg");
+  height: 100vmin;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+
+  > h1 {
+    margin: 4vmax;
+    font: 1000 2.5vmax "Roboto";
+    color: white;
+  }
+  > p {
+    font: 600 1.5vmax "Lucida Sans";
+    color: white;
+    background-color: #ff9f59;
+    padding: 1vmax 2vmax;
+    border-radius: 2vmax;
+  }
+  > a {
+    > button {
+      margin-bottom: 5vmax;
+      cursor: pointer;
+      background-color: white;
+      border: 3px solid rgb(255, 255, 255);
+      border-radius: 0;
+      padding: 1vmax;
+      transition: 0.5s all;
+      width: 9vmax;
+      font: 500 1vmax "Roboto";
+      &:hover {
+        background-color: transparent;
+        color: black;
+        border: 3px solid rgb(0, 0, 0);
+      }
+    }
+  }
+}
+
+.banner::after {
+  content: "";
+  width: 100vw;
+  height: 100vmin;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  clip-path: polygon(100% 79%, 0% 100%, 100% 100%);
+}
+
+.heading-home {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5vmax;
+  border-bottom: 2px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  color: rgba(0, 0, 0, 0.555);
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2vmax auto;
+  width: 80vw;
+  max-width: 100%;
+}
+
+///Product Cart
+.productCart {
+  width: 19vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: 0.5s ease all;
+  padding-bottom: 0.5vmax;
+  &:hover {
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+    transform: translateY(-1vmax);
+  }
+  > img {
+    width: 19vmax;
+  }
+  > p {
+    font-family: "Roboto";
+    font-size: 1.2vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+  }
+  > div {
+    margin: 0.5vmax;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    > .productCardSpan {
+      margin: 0.5vmax;
+      font: 300 0.7vmax "Roboto";
+    }
+  }
+  > span {
+    margin: 0.5vmax;
+    color: tomato;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1vmax;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .productCart {
+    width: 20vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin: 2vmax;
+    transition: 0.5s ease all;
+    padding-bottom: 0.5vmax;
+    &:hover {
+      box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+      transform: translateY(-1vmax);
+    }
+    > img {
+      width: 20vmax;
+    }
+    > p {
+      font-family: "Roboto";
+      font-size: 1.6vmax;
+      font-weight: bold;
+      margin: 1vmax 0.5vmax;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    > div {
+      margin: 0.5vmax;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      > .productCardSpan {
+        margin: 0.5vmax;
+        font: 300 1vmax "Roboto";
+      }
+    }
+    > span {
+      margin: 0.5vmax;
+      color: tomato;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 1.3vmax;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .productCart {
+    width: 20vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin: 2vmax;
+    transition: 0.5s ease all;
+    padding-bottom: 0.5vmax;
+    &:hover {
+      box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+      transform: translateY(-1vmax);
+    }
+    > img {
+      width: 20vmax;
+    }
+    > p {
+      font-family: "Roboto";
+      font-size: 1.6vmax;
+      font-weight: bold;
+      margin: 1vmax 0.5vmax;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    > div {
+      margin: 0.5vmax;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      > span {
+        margin: 0.5vmax;
+        font: 300 1.2vmax "Roboto";
+      }
+    }
+    > span {
+      margin: 0.5vmax;
+      color: tomato;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 1.5vmax;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .productCart {
+    width: 70vmin;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin: 2vmax;
+    transition: 0.5s ease all;
+    padding-bottom: 0.5vmax;
+    &:hover {
+      box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+      transform: translateY(-1vmax);
+    }
+    > img {
+      width: 70vmin;
+    }
+    > p {
+      font-family: "Roboto";
+      font-size: 2vmax;
+      margin: 1vmax 0.5vmax;
+      margin-bottom: 0;
+    }
+    > div {
+      margin: 0.5vmax;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      > span {
+        margin: 0.5vmax;
+        font: 300 1.5vmax "Roboto";
+      }
+    }
+    > span {
+      margin: 0.5vmax;
+      color: tomato;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 3vmax;
+      text-align: center;
+    }
+  }
+}
+
+
+

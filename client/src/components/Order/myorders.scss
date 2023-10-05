@@ -1,0 +1,51 @@
+// .myOrders-Container {
+//   width: 100vw;
+//   max-width: 100%;
+//   padding: 1vmax;
+// }
+// .Myorder-Image {
+//   transition: 0.4s ease all;
+//   cursor: pointer;
+// }
+// .Myorder-Image:hover {
+//   transform: scale(2);
+// }
+
+.myOrders-Container {
+  width: 100vw;
+  max-width: 100%;
+  padding: 1vmax;
+  display: flex;
+  flex-direction: column;
+}
+
+.SingleOrder {
+  display: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(5, 135, 241);
+  margin: 0.5vmax 0px;
+  position: relative;
+  padding: .5vmax;
+  .SingleOrder-right {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    > a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .MyOrdersTable {
+    display: none !important;
+  }
+  .SingleOrder {
+    display: flex !important;
+  }
+}
